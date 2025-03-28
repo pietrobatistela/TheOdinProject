@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('Norse-Bold.otf') format('opentype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+.aside {
+    height: 100vh;
+}
+
+.background {
+    height: 100%;
+    width: 600px;
+    object-fit: cover;
+}
+
+.background-block {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.493);
+    bottom: 65%;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.background-block h1 {
+    font-family: 'Norse-Bold';
+    color: white;
+    font-size: 90px;
+}
+
+.main {
+    background-color: #fbfbfd;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 600;
+    color: rgb(37, 37, 37);
+    font-size: 20px;
+    margin: 80px 30px;
+    width: 570px;
+}
+
+.form-container {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    height: 300px;
+    width: 68.75vw;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container p {
+    font-size: 20px;
+    color: rgb(59, 59, 59);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    width: 500px;
+    gap: 50px;
+}
+.first-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-block {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    color: rgb(22, 22, 22);
+}
+
+input {
+    margin-bottom: 25px;
+    width: 220px;
+    padding: 5px;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    background-color: #f8f9fc;
+}
+
+input[type="password"]:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    border: 1px solid blue;
+    outline: none;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 7px;
+    margin: 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#text {
+    margin: 0px 30px;
+}
+
+span {
+    color: #596D48;
+    font-weight: 600;
+    cursor: pointer;
+}
+
