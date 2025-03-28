@@ -55,6 +55,13 @@ h1 {
 
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
 h1, h2, span {
     color: #4d132b;
 }
@@ -263,6 +270,7 @@ footer {
         justify-content: center;
         align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(50px, 400px));
+        margin-bottom: 20px;
     }
 
     .book-card {
@@ -274,8 +282,11 @@ footer {
         width: 100%;
     }
 
+    .logo {
+        width: 100%;
+    }
+
     #openAddDialog, #editBookDialog {
-        width: 90%;
         max-width: 350px;
     }
 }
@@ -285,10 +296,16 @@ footer {
         justify-content: center;
         align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(50px, 400px));
+        margin-bottom: 20px;
     }
 
     .book-card {
         min-height: 240px;
+    }
+
+    .logo {
+        grid-column: 1;
+        width: 100%;
     }
 
     .new-book {
