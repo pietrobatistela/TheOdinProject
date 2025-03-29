@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 * {
@@ -9,11 +10,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 body {
-    background-color: #f8d9bd;
+    background: linear-gradient(to bottom, #f8d9bd, #e5a67d);
     color: #000000;
     display: grid;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .header {
@@ -26,6 +29,7 @@ body {
 }
     
 .new-book {
+    font-family: 'Poppins', sans-serif;
     grid-column: 3;
     display: flex;
     justify-content: center;
@@ -46,13 +50,13 @@ body {
 }
 
 h1 {
-    text-align: center;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 2.5rem;
     padding: 20px 0 20px 0;
     font-family: 'Merriweather', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-
+    text-align: left;
+    width: 300px;
 }
 
 .logo {
@@ -84,30 +88,52 @@ dialog::backdrop {
 }
 
 .book-card {
-    background-color: white;
+    background: linear-gradient(to bottom, #fff, #f7f6f6);
     border-radius: 8px;
     display: grid;
     grid-auto-rows: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
     padding: 10px 30px;
     min-height: 270px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     max-width: 100%;
+    border: 1px solid lightgrey;
 }
 
 .book-card:hover {
-    transform: scale(1.01);
-    transition: transform 0.3s ease-out;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .title:not(input) {
+    font-family: 'Poppins', sans-serif;
     text-align: left;
-    font-size: 1.35rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 600;
     margin-top: 10px;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+.author {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pages, .read {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+
 .btn-read {
+    font-family: 'Poppins', sans-serif;
     min-height: 40px;
     width: 200px;
     margin-top: 30px;
@@ -123,6 +149,7 @@ dialog::backdrop {
 }
 
 .btn-del {
+    font-family: 'Poppins', sans-serif;
     min-height: 40px;
     border-radius: 5px;
     border: none;
@@ -135,11 +162,6 @@ dialog::backdrop {
 
 .btn-del:hover {
     background-color: #53142E;
-}
-
-h1 {
-    text-align: left;
-    width: 300px;
 }
 
 .new-book:hover {
@@ -177,7 +199,8 @@ fieldset {
 }
 
 h2 {
-    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 label {
@@ -195,6 +218,7 @@ legend {
 }
 
 .buttons > button {
+    font-family: 'Poppins', sans-serif;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -233,7 +257,7 @@ button > img {
 
 a {
     text-decoration: none;
-    color: grey;
+    color: rgb(54, 54, 54);
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -248,7 +272,7 @@ footer {
     align-items: center;
     font-size: .85em;
     gap: 5px;
-    color: rgba(107, 114, 128);
+    color: rgb(78, 82, 90);
     margin-top: 100px;
     margin-bottom: 15px;
 }

@@ -9,7 +9,7 @@
   <body>
     <div class="header">
       <div class="logo">
-        <img src="./images/logo.png" alt="Logo" height="150px"><h1>Liberarium</h1>
+        <img src="./images/logoSemFundo.png" alt="Logo" height="150px"><h1>Liberarium</h1>
       </div>
       <button class="new-book" onclick="openDialog()">
         <img src="./images/add.png" alt="Add" height="20vh" /><p>Adicionar
@@ -25,6 +25,7 @@
           name="book-title"
           class="title"
           placeholder="Coloque o título do livro"
+          maxlength="50"
           required
         />
         <label for="book-author">Autor</label>
@@ -33,6 +34,7 @@
           name="book-author"
           class="author"
           placeholder="Coloque o autor do livro"
+          maxlength="50"
           required
         />
         <label for="book-pages">Número de páginas</label>
@@ -41,6 +43,8 @@
           name="book-pages"
           class="pages"
           placeholder="Coloque o número de páginas do livro"
+          min="1"
+          max="30000"
           required
         />
         <fieldset>
@@ -69,6 +73,7 @@
           name="edit-title"
           id="editTitle"
           class="title"
+          maxlength="50"
           placeholder="Coloque o título do livro"
           required
         />
@@ -78,6 +83,7 @@
           name="edit-author"
           id="editAuthor"
           class="author"
+          maxlength="50"
           placeholder="Coloque o autor do livro"
           required
         />
@@ -87,6 +93,8 @@
           name="edit-pages"
           id="editPages"
           class="pages"
+          min="1"
+          max="30000"
           placeholder="Coloque o número de páginas do livro"
           required
         />

@@ -99,7 +99,8 @@ function displayBook() {
 
     const read = document.createElement("p");
     read.classList.add("read");
-    read.innerHTML = `<strong>Situação:</strong> ${book.read ? "Lido" : "Não lido"}`;
+    const color = book.read ? "#166534" : "#a16207"
+    read.innerHTML = `<strong>Situação:</strong> <span style="color: ${color}; font-weight: bold;">${book.read ? "Lido" : "Não lido"}</span>`;
     card.appendChild(read);
 
     const actions = document.createElement("div");
@@ -110,7 +111,8 @@ function displayBook() {
     btnStatus.textContent = "Mudar situação";
     btnStatus.onclick = () => {
       book.status();
-      read.innerHTML = `<strong>Situação:</strong> ${book.read ? "Lido" : "Não lido"}`;
+      const color = book.read ? "#166534" : "#a16207"
+      read.innerHTML = `<strong>Situação:</strong> <span style="color: ${color}; font-weight: bold;">${book.read ? "Lido" : "Não lido"}</span>`;
       saveToLocalStorage();
     };
 
@@ -183,15 +185,25 @@ function saveEdit(){
     const pages = document.querySelector("#editPages").value.trim();
     const read = document.querySelector('input[name="editStatus"]:checked').value === "true";
 
-    const updatedBook = {
-      title,
-      author,
-      pages,
-      read
-    };
-    
-    library.editBook(window.editIndex, updatedBook);
-    closeEditDialog();
+    let isValid = true;
+    if(!title){
+      isValid = false;
+    } else if (!author){
+      isValid = false;
+    } else if (!pages){
+      isValid = false;
+    }
+
+    if(isValid){
+      const updatedBook = {
+        title,
+        author,
+        pages,
+        read
+      };
+      library.editBook(window.editIndex, updatedBook);
+      closeEditDialog();
+    } 
   }
   console.log(myLibrary)
   displayBook();
